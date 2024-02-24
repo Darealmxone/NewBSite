@@ -1,0 +1,73 @@
+
+.container-overlay {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.heart {
+  color: red;
+  font-size: 50px;
+  display: inline-block;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+.typewriter {
+  font-family: monospace;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  animation: blink 1s infinite;
+  opacity: 0; /* Start with typewriter invisible */
+  transition: opacity 1s ease; /* Smooth transition for typewriter appearance */
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+button {
+  color: white;
+  background-color: red;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px; /* Rounded corners */
+  width: 120px; /* Width for rectangular shape */
+  height: 40px; /* Height for rectangular shape */
+  opacity: 0;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: darkred; /* Darker shade on hover */
+}
+
+button:active {
+  transform: translateY(2px); /* Slight push down on click */
+}
+
+
+#buttonContainer.showButton button {
+  width: 120px;
+  height: 40px;
+  opacity: 1;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+
+
